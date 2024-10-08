@@ -46,7 +46,7 @@ select screen_name, co2_budget, co2_consumed, co2_budget - co2_consumed as co2_l
 <img width="930" alt="Screenshot 2024-10-08 at 2 26 58 PM" src="https://github.com/user-attachments/assets/7cbff048-7f07-4615-ac1b-d9fbfc14fafe">
 
 
-#Exercise 3
+# Exercise 3
 
 qn1.
 select country.name as "country name", airport.name as "airport name"
