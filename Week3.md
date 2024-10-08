@@ -38,6 +38,7 @@ select co2_consumed from game where screen_name = "Ilkka";
 
 Qn9.
 select distinct co2_budget from game;
+
 <img width="333" alt="Screenshot 2024-10-08 at 1 27 13 PM" src="https://github.com/user-attachments/assets/1ef3f9f0-b43c-4948-9ae1-688e43e6ffc7">
 
 Qn10.
