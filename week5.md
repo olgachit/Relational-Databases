@@ -76,3 +76,11 @@ select min(latitude_deg)
 from airport
 );
 <img width="244" alt="Screenshot 2024-10-08 at 3 17 29 PM" src="https://github.com/user-attachments/assets/ba135d0a-e2fd-4f62-a277-ac2b89d15dc5">
+
+# Exercise 7
+qn1.
+update game
+set  location = (select ident from airport where name = "Nottingham Airport"), co2_consumed = co2_consumed+500
+where screen_name = "Vesa";
+select * from game;
+<img width="440" alt="Screenshot 2024-10-08 at 3 28 07 PM" src="https://github.com/user-attachments/assets/f87f3481-49be-4cdf-8111-1311a1f8ae78">
