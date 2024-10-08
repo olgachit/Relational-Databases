@@ -45,3 +45,66 @@ Qn10.
 select screen_name, co2_budget, co2_consumed, co2_budget - co2_consumed as co2_left from game where screen_name = "Ilkka";
 <img width="930" alt="Screenshot 2024-10-08 at 2 26 58 PM" src="https://github.com/user-attachments/assets/7cbff048-7f07-4615-ac1b-d9fbfc14fafe">
 
+
+#Exercise 3
+
+qn1.
+select country.name as "country name", airport.name as "airport name"
+from airport, country
+where airport.iso_country = country.iso_country and country.name = "Iceland";
+<img width="596" alt="Screenshot 2024-10-08 at 2 35 43 PM" src="https://github.com/user-attachments/assets/76666758-ec08-4c23-8315-0eb8c51dc885">
+<img width="407" alt="Screenshot 2024-10-08 at 2 35 59 PM" src="https://github.com/user-attachments/assets/a83c32fb-c143-46b9-befd-15d2ae7b239a">
+
+qn2.
+select airport.name as "airport name"
+from airport, country
+where airport.iso_country = country.iso_country and country.name = "France" and airport.type = "large_airport";
+<img width="841" alt="Screenshot 2024-10-08 at 2 37 17 PM" src="https://github.com/user-attachments/assets/4bb107a1-ecf5-47dc-a9f8-ac06e59ed8ae">
+
+qn3.
+select country.name as country_name, airport.name as airport_name
+from airport, country
+where airport.iso_country = country.iso_country and country.continent = "AN";
+<img width="655" alt="Screenshot 2024-10-08 at 2 38 23 PM" src="https://github.com/user-attachments/assets/0398467c-1439-4074-9231-14a44c5c0eb5">
+
+qn4.
+select elevation_ft
+from airport, game
+where location = ident and screen_name = "Heini";
+<img width="412" alt="Screenshot 2024-10-08 at 2 39 15 PM" src="https://github.com/user-attachments/assets/c102e8d4-1b9c-4b93-9f7b-dcbe5f98936c">
+
+qn5.
+select elevation_ft * 0.3048 as elevation_m
+from airport, game
+where location = ident and screen_name = "Heini";
+<img width="422" alt="Screenshot 2024-10-08 at 2 39 53 PM" src="https://github.com/user-attachments/assets/a851a433-d532-44ea-bfb8-e2a30282a4e8">
+
+qn6.
+select name
+from airport, game
+where location = ident and screen_name = "Ilkka";
+<img width="412" alt="Screenshot 2024-10-08 at 2 40 31 PM" src="https://github.com/user-attachments/assets/29c174cc-b2ef-457c-9b26-219b689e0343">
+
+qn7.
+select country.name
+from airport, game, country
+where location = ident and airport.iso_country = country.iso_country  and screen_name = "Ilkka";
+<img width="743" alt="Screenshot 2024-10-08 at 2 41 16 PM" src="https://github.com/user-attachments/assets/32604cf0-3622-49ca-9ff0-b93a579b63e6">
+
+qn8.
+select name
+from goal, goal_reached, game
+where game.id = game_id and goal.id = goal_id and screen_name = "Heini";
+<img width="563" alt="Screenshot 2024-10-08 at 2 42 04 PM" src="https://github.com/user-attachments/assets/1e620e7b-22c1-4998-a9f5-53029aafa4a5">
+
+qn9.
+select airport.name
+from airport, game, goal, goal_reached
+where ident = location and game.id = game_id and goal.id = goal_id and screen_name = "Ilkka" and goal.name = "CLOUDS";
+<img width="884" alt="Screenshot 2024-10-08 at 2 42 44 PM" src="https://github.com/user-attachments/assets/a17a7f7d-5a34-43f7-943b-130318cda292">
+
+qn10.
+select country.name
+from country, airport, game, goal, goal_reached
+where airport.iso_country = country.iso_country and ident = location and game.id = game_id and goal.id = goal_id and screen_name = "Ilkka" and goal.name = "CLOUDS";
+<img width="1209" alt="Screenshot 2024-10-08 at 2 44 19 PM" src="https://github.com/user-attachments/assets/dc4dd707-f283-4785-b59c-b5e15ffe3e09">
